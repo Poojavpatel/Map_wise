@@ -59,8 +59,25 @@ img{
     padding: 1em 2em;
     color: #fff;
     background:#307bbb;
-    border-radius: .4em;
     font-size: 18px;
+    position: absolute;
+    width: 80%;
+    left: 0;
+    top: 0;
+    border-right: #fff 1px solid;
+}
+.btnsubmit{
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 63px;
+    background: #307bbb;
+    color: white;
+    border:none;
+    font-size: 30px;
+}
+.fas{
+    background: #307bbb;
 }
 .fuinput{
     position: absolute;

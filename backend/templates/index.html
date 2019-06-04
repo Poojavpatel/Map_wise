@@ -3,16 +3,22 @@
 <head>
 	<title>Map Wise</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
     <div class="fullcontainer">
         <h1>Map Wise</h1>
         <p>A tool to Visualize your travel data</p>
-        <div class="fileupload">
-            <label for="upload" class="label">Upload your csv</label>
-            <input id="upload" class="fuinput" type="file" name="upload" accept=".xlsx, .xls, .csv"/>
-        </div>
+            <form action="/uploadfile" method="POST" enctype="multipart/form-data">
+                <div class="fileupload">
+                    <label for="upload" class="label">Upload your csv</label>
+                    <input id="upload" class="fuinput" type="file" name="upload" accept=".xlsx, .xls, .csv"/>
+                    <button type="submit" class="btnsubmit">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
     </div>
 <script type="text/javascript" src="/static/script.js"></script>
 </body>
