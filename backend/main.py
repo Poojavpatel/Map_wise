@@ -1,5 +1,8 @@
-import flask, request
+import flask
+
 app=flask.Flask("__main__")
+upload_folder = "/data"
+app.config['UPLOAD_FOLDER'] =upload_folder
 
 @app.route("/" , methods = ['GET'])
 def my_index():
@@ -7,6 +10,9 @@ def my_index():
 
 @app.route("/uploadfile" , methods = ['POST'])
 def myfile():
-    data=request.form['upload']
+    f=request.files['file']
+    f.save(f.filename)
+    return 'file uploaded successfully'
+#     data=request.form['upload']
 
 app.run(debug=True)
